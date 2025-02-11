@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* GIF Background */
+.background-gif {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Efek Love Beterbangan */
+.hearts-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: float 5s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Kotak pesan dengan efek blur dan transparan */
+.container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1;
+    animation: scale-up 1s ease-in-out;
+}
+
+/* Efek fade-in */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fade-in 1.5s ease-in-out;
+}
+
+/* Efek tombol melayang */
+.btn-animate {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-animate:hover {
+    background-color: #e03e57;
+    transform: scale(1.1);
+}
+
+/* Animasi teks pesan */
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.message-animate {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d6336c;
+    margin-top: 20px;
+    animation: pop 0.5s ease-in-out;
+}
+
+.panda-gif {
+    display: block;
+    margin: 20px auto 0; /* Membuatnya berada di tengah */
+    width: 150px; /* Sesuaikan ukuran jika perlu */
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Animasi goyang-goyang */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.btn-animate {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: opacity 0.5s ease-in-out, transform 0.3s;
+}
+
+.btn-animate:hover {
+    background-color: #e03e57;
+    transform: scale(1.1);
+}
+
+/* Tombol WhatsApp awalnya tersembunyi */
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Efek mengetik */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
